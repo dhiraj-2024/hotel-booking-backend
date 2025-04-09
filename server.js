@@ -1,11 +1,11 @@
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("../config/db");
-const bookingRoutes = require("../routes/bookingRoutes.js");
-const nominativeRoutes = require("../routes/nominativeRoutes.js");
-const internationalAthleteRoutes = require("../routes/internationalAthleteRoutes.js");
-const accommodationRoutes = require('../routes/accommodationRoutes.js');
+const connectDB = require("./config/db.js");
+const bookingRoutes = require("./routes/bookingRoutes.js");
+const nominativeRoutes = require("./routes/nominativeRoutes.js");
+const internationalAthleteRoutes = require("./routes/internationalAthleteRoutes.js");
+const accommodationRoutes = require('./routes/accommodationRoutes.js');
 const serverless = require('serverless-http');
 //! DATABASE CONNECTION                  
 connectDB();
@@ -31,6 +31,13 @@ app.use("/api/nominative", nominativeRoutes);
 app.use("/api/international-athletes", internationalAthleteRoutes);
 //? ACCOMMODATION hotel data
 app.use('/api/accommodations', accommodationRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+app.get('/about', (req, res) => {
+  res.send('About route 🎉 ')
+})
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
