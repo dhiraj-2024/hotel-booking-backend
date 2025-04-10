@@ -1,0 +1,105 @@
+/* src/pages/NominativeFailure.css */
+.nominative-failure-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+  }
+  
+  .failure-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .failure-icon {
+    font-size: 4rem;
+    color: #dc3545;
+    margin-bottom: 1rem;
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    20%, 60% {transform: translateX(-5px);}
+    40%, 80% {transform: translateX(5px);}
+  }
+  
+  .failure-container h1 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+  }
+  
+  .error-message {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+  
+  .reference-id {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+  
+  .reference-id strong {
+    color: #212529;
+    font-weight: 600;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .retry-button,
+  .contact-support {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .retry-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .retry-button:hover {
+    background-color: #c82333;
+  }
+  
+  .contact-support {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .contact-support:hover {
+    background-color: #5a6268;
+  }
+  
+  @media (max-width: 768px) {
+    .failure-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .retry-button,
+    .contact-support {
+      width: 100%;
+    }
+  }

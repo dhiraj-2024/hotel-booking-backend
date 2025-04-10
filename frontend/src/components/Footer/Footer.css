@@ -1,0 +1,129 @@
+/* Footer.css */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+  }
+  
+  .logo-section {
+    flex: 0 0 auto;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .nav-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links li a:hover {
+    color: #ccc;
+  }
+  
+  .info-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .info-section p {
+    font-size: 13px;
+    color: #cdff94;
+    margin: 5px 0 0;
+  }
+  
+  .website-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .website-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .watermark {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .watermark:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+  
+    .logo-section {
+      order: 1;
+    }
+  
+    .nav-section {
+      order: 2;
+      width: 100%;
+    }
+  
+    .info-section {
+      order: 3;
+      width: 100%;
+    }
+  
+    .footer-links {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 30px 0 20px;
+    }
+    
+    .footer-links {
+      gap: 15px;
+    }
+    
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+  }

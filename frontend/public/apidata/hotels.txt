@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": 1,
+    "name": "STAY PRIME HOTEL",
+    "image": "../../assets/images/hotel1.jpeg",
+    "location": "https://maps.app.goo.gl/uXEaDWQntCCzhyFb8",
+    "price": 750,
+    "rating": 4.9,
+    "available_slots": 76,
+    "room_type": "AC Deluxe"
+},
+    {
+      "id": 2,
+      "name": "TREEBO LOTUS BANER",
+      "image": "../../assets/images/hotel2.jpeg",
+      "location": "https://maps.app.goo.gl/WzBVRytqD7QcNuTH7",
+      "price": 750,
+      "rating": 4.0,
+      "available_slots": 44,
+      "room_type": "AC Deluxe"
+  },
+  {
+    "id": 3,
+    "name": "HOSTEL",
+    "image": "../../assets/images/hotel3.jpeg",
+    "location": "https://maps.app.goo.gl/7ybztLq2B6rbPfay7",
+    "price": 140,
+    "rating": 3.5,
+    "available_slots": 300,
+    "room_type": "NON AC"
+},
+  {
+    "id": 4,
+    "name": "TREEBO TULIP ",
+    "image": "../assets/images/hotel4.jpeg",
+    "location": "https://maps.app.goo.gl/wYSWnvpiKAnUt2V99",
+    "price": 750,
+    "rating": 4.2,
+    "available_slots":44,
+    "room_type": "AC Deluxe"
+  }
+]

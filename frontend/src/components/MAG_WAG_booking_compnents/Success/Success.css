@@ -1,0 +1,82 @@
+.invoice-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .invoice-title {
+    text-align: center;
+    font-size: 24px;
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  .invoice-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .company-details {
+    font-weight: bold;
+  }
+  
+  .invoice-meta {
+    text-align: right;
+  }
+  
+  .invoice-details p {
+    margin: 5px 0;
+  }
+  
+  .members-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .members-table th, .members-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .members-table th {
+    background-color: black;
+    color: white;
+  }
+  
+  .download-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .download-button:hover {
+    background-color: #135abc;
+  }
+  
+  .home-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .home-link:hover {
+    text-decoration: underline;
+  }
+  

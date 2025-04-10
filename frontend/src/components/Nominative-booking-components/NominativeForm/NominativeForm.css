@@ -1,0 +1,140 @@
+/* src/components/NominativeForm/NominativeForm.css */
+.nominative-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(29 154 224 / 88%);  }
+  
+  .nominative-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .nominative-header h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  .nominative-header p{
+    color: #e81b74;
+    font-weight: 400;
+  }
+  
+  .subtitle {
+    color: #666;
+  }
+  
+  .nominative-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 95%;
+    padding: 0.75rem;
+    border: 1px solid #9d9d9d;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+/* Update your CSS with these changes */
+.form-group input[type="date"] {
+  width: 85%;
+  padding: 0.75rem;
+  border: 1px solid #9d9d9d;
+  border-radius: 4px;
+  font-size: 1rem;
+  appearance: none; /* Removes default browser styling */
+  -webkit-appearance: none; /* For Safari */
+  position: relative;
+  background-color: white;
+}
+
+/* Custom calendar icon */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1; /* Make it fully visible */
+  color: #666;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-image: none; /* Remove default icon */
+}
+
+/* Add a custom arrow icon */
+.form-group input[type="date"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M14 2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2z'/%3E%3Cpath d='M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  padding-right: 35px; /* Make space for the icon */
+}
+
+/* Focus state */
+.form-group input[type="date"]:focus {
+  outline: none;
+  border-color: #902fff;
+  box-shadow: 0 0 0 2px rgba(144, 47, 255, 0.2);
+}
+  .price-summary {
+    grid-column: span 2;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c7be5;
+  }
+  
+  .submit-button {
+    grid-column: span 2;
+    border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #3b86bc 0%, #19acf0  51%, #2fc8ff  100%);
+  cursor: pointer;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+background-color: black;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nominative-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .price-summary,
+    .submit-button {
+      grid-column: span 1;
+    }
+  }

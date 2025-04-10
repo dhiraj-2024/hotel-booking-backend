@@ -1,0 +1,182 @@
+/* path: /Users/rajputdhiraj/Desktop/new-hotel-booking-copy/frontend/src/components/ContactUs/ContactUs.css */
+.contact-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .contact-header h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .contact-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    height: 100%;
+  }
+  
+  .contact-card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f1c40f;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #3498db;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .submit-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-top: 1.5rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #f1c40f;
+    min-width: 30px;
+  }
+  
+  .contact-item h3 {
+    color: #2c3e50;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .contact-item p {
+    margin: 0;
+    color: #7f8c8d;
+  }
+  
+  .operating-hours {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ecf0f1;
+  }
+  
+  .operating-hours h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .operating-hours p {
+    color: #7f8c8d;
+    margin: 0;
+  }
+  
+  .contact-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .contact-footer p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+  }
+  
+  .back-button {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #7f8c8d;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+      padding: 1rem;
+    }
+  }

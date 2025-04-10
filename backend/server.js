@@ -6,44 +6,50 @@ const bookingRoutes = require("./routes/bookingRoutes.js");
 const nominativeRoutes = require("./routes/nominativeRoutes.js");
 const internationalAthleteRoutes = require("./routes/internationalAthleteRoutes.js");
 const accommodationRoutes = require('./routes/accommodationRoutes.js');
-const serverless = require('serverless-http');
-//! DATABASE CONNECTION                  
+const path = require('path');
+
+// Connect to MongoDB
 connectDB();
 
+const rootDir = path.resolve();
 const app = express();
 
-//! MIDDLEWARES 
+// CORS Configuration
 app.use(cors({
-  origin: `${process.env.FRONTEND_URL}`,
+  origin: process.env.FRONTEND_URL,
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Add OPTIONS method
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
 }));
-app.options('*', cors()); 
+app.options('*', cors());
+
+// Body Parser
 app.use(express.json());
 
-//! ROUTES
-//? MAG_WAG BOOKING
+// API Routes
 app.use("/api", bookingRoutes);
-//? NOMINATIVE BOOKING
 app.use("/api/nominative", nominativeRoutes);
-//? INTERNATIONAL ATHLETE BOOKING
 app.use("/api/international-athletes", internationalAthleteRoutes);
-//? ACCOMMODATION hotel data
-app.use('/api/accommodations', accommodationRoutes);
+app.use("/api/accommodations", accommodationRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
-app.get('/about', (req, res) => {
-  res.send('About route 🎉 ')
-})
+// Simple Routes
+// app.get('/', (req, res) => res.send('Hello World dhiraj'));
+app.get('/about', (req, res) => res.send('About route 🎉'));
 
+// Error Handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ success: false, message: 'Something broke!' });
 });
 
-module.exports = app;
-module.exports.handler = serverless(app);
+// Serve frontend
+app.use(express.static(path.join(rootDir, "/frontend/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(rootDir, "frontend", "build", "index.html"));
+});
 
+
+// Start Server
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
+});

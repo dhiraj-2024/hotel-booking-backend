@@ -1,0 +1,154 @@
+.booking-portal-page {
+  background-image: url("../../../public/assets/images/211.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(214, 255, 249);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.portal-hero {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.portal-hero h1 {
+  color: rgb(214, 214, 214);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgb(32, 220, 253);
+  margin: 0;
+}
+
+.portal-hero h2 {
+  color: rgb(214, 214, 214);
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  margin: 5px 0;
+}
+
+.portal-hero h3 {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 800;
+  color: rgb(240, 36, 104);
+  margin: 0;
+}
+
+.booking-options-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.booking-card {
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.booking-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.booking-card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.booking-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: black;
+  z-index: 1;
+}
+
+.booking-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+.card-arrow {
+  font-size: 1.5rem;
+  text-align: right;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.booking-card:hover .card-arrow {
+  transform: translateX(5px);
+}
+
+/* Extra responsiveness tweaks */
+@media (max-width: 768px) {
+  .portal-hero {
+    padding: 10px;
+  }
+
+  .booking-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-hero {
+    margin-top: 20px;
+  }
+
+  .booking-options-container {
+    padding: 1rem 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2.2rem;
+  }
+
+  .booking-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .booking-card p {
+    font-size: 0.95rem;
+  }
+}

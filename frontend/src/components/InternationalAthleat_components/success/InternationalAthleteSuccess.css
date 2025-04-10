@@ -1,0 +1,123 @@
+/* src/pages/InternationalAthleteSuccess.css */
+.success-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .success-container h2 {
+    color: #2ecc71;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .success-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0.8rem 0;
+    line-height: 1.6;
+  }
+  
+  .success-container strong {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  /* Loading state */
+  .success-container p:empty::before {
+    content: "Loading...";
+    color: #7f8c8d;
+  }
+  
+  /* Order details section */
+  .order-details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: left;
+  }
+  
+  .order-details p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Confirmation icon */
+  .confirmation-icon {
+    font-size: 4rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  /* Action buttons */
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .print-button,
+  .home-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .print-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .print-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .home-button {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+  }
+  
+  .home-button:hover {
+    background-color: #bdc3c7;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .success-container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .success-container h2 {
+      font-size: 1.5rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+  }

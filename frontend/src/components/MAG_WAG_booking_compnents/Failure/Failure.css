@@ -1,0 +1,93 @@
+/* path: /Users/rajputdhiraj/Desktop/new-hotel-booking-copy/frontend/src/components/Failure/Failure.css */
+.failure-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .failure-title {
+    color: #e74c3c;
+    margin-bottom: 1.5rem;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fde8e8;
+    border-radius: 4px;
+  }
+  
+  .booking-details {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .booking-details h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .details-content p {
+    margin: 0.8rem 0;
+    font-size: 1rem;
+  }
+  
+  .details-content strong {
+    color: #555;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .retry-button, .contact-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .retry-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .retry-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .contact-button {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .contact-button:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .home-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .home-link:hover {
+    text-decoration: underline;
+  }

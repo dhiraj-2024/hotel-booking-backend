@@ -6,7 +6,7 @@ const ExcelJS = require('exceljs');
 
 const createInternationalAthlete = async (req, res) => {
   try {
-    console.log("Incoming request body:", req.body);
+    // console.log("Incoming request body:", req.body);
 
     const { 
       name,
@@ -159,7 +159,7 @@ const createInternationalAthlete = async (req, res) => {
 const checkStatus = async (req, res) => {
   try {
     const { order_id } = req.params;
-    console.log(`Checking payment status for order: ${order_id}`);
+    // console.log(`Checking payment status for order: ${order_id}`);
     
     // Verify payment with Cashfree
     const response = await axios.get(
@@ -174,7 +174,7 @@ const checkStatus = async (req, res) => {
     );
 
     const paymentStatus = response.data[0]?.payment_status || 'PENDING';
-    console.log(`Payment status for ${order_id}: ${paymentStatus}`);
+    // console.log(`Payment status for ${order_id}: ${paymentStatus}`);
     
     const booking = await InternationalAthlete.findOne({ orderId: order_id });
     
@@ -189,7 +189,7 @@ const checkStatus = async (req, res) => {
     if (paymentStatus === 'SUCCESS') {
       // Only update if payment is successful and not already updated
       if (booking.paymentStatus !== 'PAID') {
-        console.log(`Updating room availability for hotel: ${booking.hotelId}`);
+        // console.log(`Updating room availability for hotel: ${booking.hotelId}`);
         
         try {
           // Update room availability

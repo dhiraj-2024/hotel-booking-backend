@@ -128,7 +128,7 @@ const checkStatus = async (req, res) => {
     if (paymentStatus === 'SUCCESS') {
       // Only update if payment is successful and not already updated
       if (booking.paymentStatus !== 'PAID') {
-        console.log(`Updating room availability for hotel: ${booking.hotelId}`);
+        // console.log(`Updating room availability for hotel: ${booking.hotelId}`);
         
         try {
           // Update room availability
@@ -147,7 +147,7 @@ const checkStatus = async (req, res) => {
           if (!updatedHotel) {
             console.error(`Hotel not found or not a hotel type: ${booking.hotelId}`);
           } else {
-            console.log(`Successfully updated hotel ${updatedHotel.name}. New available rooms: ${updatedHotel.availableRooms}`);
+            // console.log(`Successfully updated hotel ${updatedHotel.name}. New available rooms: ${updatedHotel.availableRooms}`);
           }
         } catch (error) {
           console.error("Error updating hotel availability:", error);
@@ -159,7 +159,7 @@ const checkStatus = async (req, res) => {
           { paymentStatus: 'PAID' },
           { new: true }
         );
-        console.log(`Booking ${order_id} marked as PAID`);
+        // console.log(`Booking ${order_id} marked as PAID`);
       }
 
       return res.redirect(
@@ -171,7 +171,7 @@ const checkStatus = async (req, res) => {
         { paymentStatus: 'FAILED' },
         { new: true }
       );
-      console.log(`Booking ${order_id} marked as FAILED`);
+      // console.log(`Booking ${order_id} marked as FAILED`);
       
       return res.redirect(
         `${process.env.FRONTEND_URL}/failure?order_id=${order_id}`

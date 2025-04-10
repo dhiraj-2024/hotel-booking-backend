@@ -1,13 +1,13 @@
-require('dotenv').config(); // Make sure this is at the very top
+require('dotenv').config(); // Must be at the top
 const mongoose = require('mongoose');
 const Accommodation = require('./models/Accommodation');
-const connectDB = require('./config/db'); // Import your existing db.js
+const connectDB = require('./config/db');
 
 const seedData = async () => {
   try {
-    await connectDB(); // Use your existing connection function
+    await connectDB(); // Connect to MongoDB
 
-    // Clear existing data
+    // Clear existing accommodations
     await Accommodation.deleteMany();
 
     // Hostel data
@@ -25,8 +25,9 @@ const seedData = async () => {
       bookingLimit: 6,
       availableRooms: 93,
       notes: [
-        'The Hostel Triple Rooms will have only 3 Beds but may be occupied by maximum 4 Persons (No Extra Bed will be provided)',
-        'No Dinner on 28th April and 3rd May'
+        '🟢 Full Board Meals: Includes breakfast, lunch, and dinner(Lunch at Competition Venue)',
+        '🔶 No Dinner on 28th April And 3rd May',
+        '🔷 The Hostel Triple Rooms will have only 3 Beds but may be occupied by maximum 4 Persons (No Extra Bed will be provided)'
       ]
     });
 
@@ -35,7 +36,7 @@ const seedData = async () => {
       type: 'hotel',
       name: 'Hotel',
       image: 'hotel-image-url.jpg',
-      description: 'AC rooms with good facilities.',
+      description: 'AC rooms.',
       priceOptions: [
         { nights: 4, persons: 2, price: 9600 },
         { nights: 4, persons: 3, price: 13200 },
@@ -45,18 +46,19 @@ const seedData = async () => {
       bookingLimit: 6,
       availableRooms: 40,
       notes: [
-        'Per Room Full Board (Breakfast and Dinner at Hotel, Lunch at Competition Venue)',
-        'Does not include Dinner on 28th Apr and 3rd May'
+        '🟢 Full Board Meals: Includes breakfast, lunch, and dinner(Lunch at Competition Venue)',
+        '🔶 No Dinner on 28th April And 3rd May'
       ]
     });
 
+    // Save both
     await hostel.save();
     await hotel.save();
 
-    console.log('Database seeded successfully');
-    mongoose.connection.close(); // Close the connection when done
+    console.log('✅ Database seeded successfully');
+    mongoose.connection.close(); // Close connection
   } catch (error) {
-    console.error('Error seeding database:', error);
+    console.error('❌ Error seeding database:', error);
     process.exit(1);
   }
 };

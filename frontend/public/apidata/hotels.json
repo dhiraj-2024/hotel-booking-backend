@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Hostel NO 1",
+      "image": "../assets/images/hotel3.jpeg",
+      "location": "https://maps.app.goo.gl/7ybztLq2B6rbPfay7",
+      "price_4_nights": 3000,
+      "price_5_nights": 3500,
+      "rating": 3.5,
+      "available_slots": 280,
+      "room_type": "Non-AC",
+      "description": "Basic rooms with minimum facilities, non-AC, limited water supply. 3-bed occupancy but can accommodate up to 4 people."
+    },
+    {
+      "id": 2,
+      "name": "Hotel NO 2",
+      "image": "../assets/images/hotel2.jpeg",
+      "location": "https://maps.app.goo.gl/WzBVRytqD7QcNuTH7",
+      "price_4_nights": 5000,
+      "price_5_nights": 6000,
+      "rating": 4.5,
+      "available_slots": 100,
+      "room_type": "AC",
+      "description": "AC rooms with good facilities. 3-person occupancy per room."
+    }
+  ]
+  
